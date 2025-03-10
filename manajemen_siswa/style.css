@@ -1,0 +1,323 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Press+Start+2P&display=swap');
+
+/* General Styles */
+body {
+    text-align: left; /* Align all text to the left */
+
+    font-family: 'Press Start 2P', monospace;
+    /* Retro Gaming Font */
+    margin: 0;
+    padding: 20px;
+    background-color: #1e272e;
+    /* Dark Background */
+    color: #fff;
+    /* Light Text */
+   
+    text-shadow: 1px 1px 2px #000;
+  
+    width: 100vw;
+    /* Lebar viewport */
+    box-sizing: border-box;
+    /* Penting untuk menghitung lebar dengan benar */
+}
+
+@keyframes glitch {
+    2%,
+    64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+h2 {
+    font-size: 3em;
+    text-align: center;
+    color: #ff4757;
+    /* Bright Red */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    /* Neon glow */
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff9da6, 0 0 70px #ff9da6, 0 0 80px #ff9da6, 0 0 100px #ff9da6;
+    }
+
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff9da6, 0 0 35px #ff9da6, 0 0 40px #ff9da6, 0 0 50px #ff9da6;
+    }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(30, 39, 46, 0.8);
+    /* Semi-transparent dark background */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    border: 2px dashed #ff6b81;
+    /* Dashed border */
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        border-color: #ff6b81;
+    }
+
+    to {
+        border-color: #a5b1c2;
+    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    /* To apply border radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    table-layout: fixed; /* Tambahkan ini */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+th,
+td {
+    border: none;
+    padding: 15px;
+    text-align: left;
+    color: #fff;
+    word-wrap: break-word;
+    /* Putus kata panjang agar tidak melebihi sel */
+    overflow: hidden;
+    /* Sembunyikan konten yang meluap */
+}
+
+thead {
+    background-color: #2f3640;
+    /* Darker header */
+    color: #ff6b81;
+    /* Bright text color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: none;
+    /* Remove text shadow from header */
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+    background-color: rgba(47, 54, 64, 0.7);
+    /* Darker hover */
+    transform: translateY(-2px);
+    /* Lift slightly */
+    transition: transform 0.3s ease;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(47, 54, 64, 0.5);
+    /* Semi-transparent form */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    color: #a5b1c2;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    text-align: left; /* Align labels to the left */
+
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #3d4551;
+    /* Dark input background */
+    color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(90deg, #ff6f61, #ff3d00);
+    color: white;
+    padding: 12px 20px;
+    border: 2px solid #fff;
+    /* Tambahkan border putih */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Transisi untuk semua properti */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    /* Hilangkan outline saat difokus */
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff3d00, #ff6f61);
+    transform: translateY(-2px);
+    /* Angkat tombol sedikit */
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.5);
+    border-color: #ffccbc;
+    /* Ubah warna border saat dihover */
+}
+
+button:active {
+    transform: translateY(0);
+    /* Kembalikan posisi saat ditekan */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    /* Kurangi bayangan saat ditekan */
+}
+/* Hapus. Halama Sebelumnya Halaman Berikutnya */
+div a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    
+}
+
+div a:hover {
+    background-color: #e44d26;
+}
+
+/* Link Styles (Gaya Tombol) */
+a {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 5px;
+  color: white;
+  background: linear-gradient(90deg, #ff6f61, #ff3d00);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  
+}
+
+a:hover {
+  background: linear-gradient(90deg, #ff3d00, #ff6f61);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+a:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+/* Link Styles (Gaya Tombol Abu-abu Hanya di Tabel, Edit Saja) */
+td a[href*="edit.php"] {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    color: #fff;
+    /* Warna teks putih */
+    background-color: #007bff;
+    /* Warna biru cerah */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s;
+    /* Transisi yang lebih halus */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Bayangan lebih halus */
+}
+
+td a[href*="edit.php"]:hover {
+    background-color: #0056b3;
+    /* Warna biru yang sedikit lebih gelap saat dihover */
+    transform: translateY(-2px);
+    /* Efek mengangkat yang subtil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Bayangan lebih kuat saat dihover */
+}
+
+td a[href*="edit.php"]:active {
+    transform: translateY(0);
+    /* Kembalikan posisi saat ditekan */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* Kurangi bayangan saat ditekan */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"],
+    textarea {
+        margin-bottom: 15px;
+    }
+}
+p{
+   
+    text-align: center;
+}
